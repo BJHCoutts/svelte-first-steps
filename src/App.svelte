@@ -1,5 +1,6 @@
 <script lang="ts">
 	export let name: string;
+	import Product from './Product.svelte'
 </script>
 
 <main>
@@ -16,7 +17,7 @@
 	}
 
 	h1 {
-		color: #ff3e00;
+		color: purple;
 		text-transform: uppercase;
 		font-size: 4em;
 		font-weight: 100;
@@ -28,3 +29,5 @@
 		}
 	}
 </style>
+
+<Product />
