@@ -1,3 +1,17 @@
+<script>
+	export let productTitle = ''
+	export let productDescription = ''
+	export let productPrice = ''
+
+</script>
+
+<div>
+	<h1>Title: {productTitle}</h1>
+	<h2>Price: {productPrice}</h2>
+	<p>Description: {productDescription}</p>
+	<button>Add to Cart</button>
+</div>
+
 <style>
 	div {
 		margin: .5em;
@@ -36,10 +50,3 @@
 	}
 
 </style>
-
-<div>
-	<h1>Title</h1>
-	<h2>Price</h2>
-	<p>Description</p>
-	<button>Add to Cart</button>
-</div>
