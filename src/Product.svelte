@@ -1,24 +1,28 @@
 <script>
+
 	export let productTitle = ''
 	export let productDescription = ''
 	export let productPrice = ''
+	
+	import Button from './Button.svelte'
+	import { createEventDispatcher } from 'svelte'
 
+	const dispatch = createEventDispatcher()
+
+	const addToCart = () => {
+		dispatch('addcart', productTitle)
+	}
+	
 </script>
 
-<div>
-	<h1>Title: {productTitle}</h1>
-	<h2>Price: {productPrice}</h2>
-	<p>Description: {productDescription}</p>
-	<button>Add to Cart</button>
-</div>
-
 <style>
+
 	div {
 		margin: .5em;
 		padding: .75em;
 		box-shadow: 0 2px 8px hsla(0, 0%, 0%, .25);
 		border-radius: 5px;
-		background: whitesmoke;
+		background: hsla( 0, 0%, 97%, 1);
 	}
 
 	h1 {
@@ -36,17 +40,11 @@
 		margin: 0 0 .25em;
 	}
 
-	button {
-		font: inherit;
-		padding: .15em 5em;
-		background: orange;
-		color: white;
-	}
-
-	button:hover,
-	button:active {
-		box-shadow: hsla(0, 0%, 0%, .25);
-		cursor: pointer;
-	}
-
 </style>
+
+<div>
+	<h1>Title: {productTitle}</h1>
+	<h2>Price: {productPrice}</h2>
+	<p>Description: {productDescription}</p>
+	<Button on:click={addToCart}>Add to Cart</Button>
+</div>
