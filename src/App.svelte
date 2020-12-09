@@ -2,6 +2,7 @@
 	export let name: string
 	import Button from './Button.svelte'
 	import Product from './Product.svelte'
+	import Cart from './Cart.svelte'
 	
 	let productTitle = ''
 	let productPrice = ''
@@ -78,6 +79,10 @@
 	<h1>Hello {name}!</h1>
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 	
+	<section>
+		<Cart items={cartItems} />
+	</section>
+
 	<section>
 	
 		<div>
